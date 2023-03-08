@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header as='h2' icon="users" content="Reactivity"/>
+      <Header as='h2' icon="users" content="Reactivity" />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <List>
