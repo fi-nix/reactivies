@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Persistance;
+using Persistence;
 
 #nullable disable
 
-namespace Persistance.Migrations
+namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221121070402_AddCategory")]
-    partial class AddCategory
+    [Migration("20221121064457_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,6 @@ namespace Persistance.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Category")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("City")
